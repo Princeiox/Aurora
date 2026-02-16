@@ -1,0 +1,20 @@
+
+say "Hello, Breeze!"
+
+let x = 10
+let y = 20
+if x < y:
+    say "X is smaller"
+else:
+    say "X is bigger"
+end
+
+repeat 3 times:
+    say "Hip Hip Hooray!"
+end
+
+define greet(name):
+    say "Greetings, " + name
+end
+
+greet("Visitor")

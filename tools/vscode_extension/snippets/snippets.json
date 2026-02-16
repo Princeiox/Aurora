@@ -1,0 +1,38 @@
+{
+    "Say": {
+        "prefix": "say",
+        "body": [
+            "say \"$1\""
+        ],
+        "description": "Print output"
+    },
+    "Loop": {
+        "prefix": "repeat",
+        "body": [
+            "repeat ${1:10} times:",
+            "    $0",
+            "end"
+        ],
+        "description": "Repeat loop"
+    },
+    "Condition": {
+        "prefix": "if",
+        "body": [
+            "if $1:",
+            "    $2",
+            "else:",
+            "    $3",
+            "end"
+        ],
+        "description": "If-Else Block"
+    },
+    "Function": {
+        "prefix": "define",
+        "body": [
+            "define ${1:funcName}(${2:args}):",
+            "    $0",
+            "end"
+        ],
+        "description": "Define a function"
+    }
+}

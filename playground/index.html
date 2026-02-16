@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Playground</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🍃 Aurora</div>
+            <div class="controls">
+                <button id="run-btn">Run Code ▶</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="editor-pane">
+                <div class="pane-header">Code</div>
+                <textarea id="code-editor" spellcheck="false">
+say "Welcome to Aurora!"
+
+# Lists
+let nums = [1, 2, 3]
+push(nums, 4)
+say nums
+
+# Classes
+class Greeter:
+    define init(self, name):
+        self.name = name
+    end
+    define greet(self):
+        say "Hello " + self.name
+    end
+end
+
+let g = Greeter("World")
+g.greet()
+</textarea>
+            </div>
+
+            <div class="output-pane">
+                <div class="pane-header">Output</div>
+                <div id="output-console"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="tokenizer.js"></script>
+    <script src="parser.js"></script>
+    <script src="interpreter.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

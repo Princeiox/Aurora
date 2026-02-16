@@ -1,0 +1,21 @@
+
+let nums = [10, 20, 30]
+say "Initial: "
+say nums
+
+push(nums, 40)
+say "After push: "
+say nums
+
+let last = pop(nums)
+say "Popped: " + last
+say "Remaining: "
+say nums
+
+say "Len: " + len(nums)
+
+# Test mutation reference
+let ref = nums
+push(ref, 99)
+say "Original after ref push:"
+say nums

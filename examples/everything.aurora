@@ -1,0 +1,41 @@
+
+# Aurora Feature Showcase
+
+say "--- Arrays ---"
+let list = [1, 2, 3]
+push(list, 4)
+say pop(list)
+say len(list)
+
+say "--- OOP ---"
+class Counter:
+    define init(self, start):
+        self.count = start
+    end
+    define inc(self):
+        self.count = self.count + 1
+    end
+    define getValue(self):
+        return self.count
+    end
+end
+
+let c = Counter(10)
+c.inc()
+say c.getValue()
+
+say "--- Modules ---"
+import math
+say add(10, 20)
+
+say "--- I/O ---"
+write("demo.txt", "Aurora is cool")
+say read("demo.txt")
+
+say "--- Control Flow ---"
+if 5 > 3:
+    say "5 is big"
+end
+repeat 2 times:
+    say "Echo"
+end

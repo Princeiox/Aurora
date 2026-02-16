@@ -1,0 +1,18 @@
+
+class Dog:
+    define init(self, name):
+        self.name = name
+        say "Inside init: " + self.name
+    end
+
+    define bark(self):
+        say "Inside bark"
+        say self.name + " says Woof!"
+    end
+end
+
+say "Creating Dog..."
+let d = Dog("Buddy")
+say "Dog Created"
+d.bark()
+say "Done"

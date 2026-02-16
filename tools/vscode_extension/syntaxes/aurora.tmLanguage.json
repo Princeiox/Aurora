@@ -1,0 +1,71 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Aurora",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#functions"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.number-sign.aurora",
+                    "match": "#.*$"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.aurora",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.aurora",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.aurora",
+                    "match": "\\b(if|else|end|repeat|times|while|return|define|class|import|wait)\\b"
+                },
+                {
+                    "name": "keyword.other.aurora",
+                    "match": "\\b(say|let|ask)\\b"
+                },
+                {
+                    "name": "constant.language.aurora",
+                    "match": "\\b(true|false)\\b"
+                },
+                {
+                    "name": "keyword.operator.aurora",
+                    "match": "\\b(and|or|not)\\b"
+                }
+            ]
+        },
+        "numbers": {
+            "name": "constant.numeric.aurora",
+            "match": "\\b\\d+(\\.\\d+)?\\b"
+        },
+        "functions": {
+            "match": "\\b([a-zA-Z_]\\w*)\\s*(?=\\()",
+            "name": "entity.name.function.aurora"
+        }
+    },
+    "scopeName": "source.aurora"
+}

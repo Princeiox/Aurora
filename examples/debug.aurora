@@ -1,0 +1,25 @@
+
+class Counter:
+    define init(self, start):
+        say "In Init"
+        self.count = start
+    end
+    define inc(self):
+        say "In Inc"
+        self.count = self.count + 1
+        say "Inc Done"
+    end
+    define get(self):
+        say "In Get"
+        return self.count
+    end
+end
+
+say "Start"
+let c = Counter(10)
+say "Inc calling"
+c.inc()
+say "Get calling"
+let val = c.get()
+say "Val is:"
+say val
